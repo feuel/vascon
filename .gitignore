@@ -46,7 +46,4 @@ Thumbs.db
 out
 
 #env
-backend/.test.env
-backend/.development.env
-backend/.env
 backend/*.env
