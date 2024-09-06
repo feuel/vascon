@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+.btn {
+  @apply h-10 rounded-[6px] px-4 flex justify-center items-center outline-none bg-indigo-600 hover:bg-indigo-800 transition-colors duration-300 text-white text-sm focus-visible:ring-2 ring-indigo-600 ring-offset-2 disabled:bg-opacity-50 font-medium;
+}
+@tailwind utilities;
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.coin {
+  --size: 40px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-block;
+  user-select: none;
+  position: relative;
+  margin: 5px;
+  top: 6px;
+  border-radius: 50px;
+  z-index: 1;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    45deg,
+    rgba(242, 215, 12) 0%,
+    white 56%,
+    rgba(252, 235, 0) 96%
+  );
+}
+
+.coin span {
+  font-family: georgia;
+  font-style: italic;
+  font-weight: 900;
+  position: absolute;
+  font-size: 16px;
+  z-index: 3;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  color: rgb(230 204 43);
+}
+
+.coin:after {
+  content: '';
+  width: calc(var(--size) - 10px);
+  height: calc(var(--size) - 10px);
+  display: block;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 50px;
+  z-index: 2;
+  background: linear-gradient(
+    45deg,
+    rgba(242, 215, 12) 0%,
+    white 56%,
+    rgba(252, 235, 0) 96%
+  );
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(242, 215, 12, 0.3);
+  border-right: 1px solid rgba(242, 215, 12, 0.3);
+  box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, 0.05);
+}
+
+.coin:before {
+  content: '';
+  width: calc(var(--size) - 2px);
+  height: calc(var(--size) - 2px);
+  display: block;
+  position: absolute;
+  border-radius: 50px;
+  z-index: 1;
+  background: linear-gradient(
+    45deg,
+    rgba(242, 215, 12, 1) 0%,
+    rgba(255, 255, 255, 1) 56%,
+    rgba(252, 235, 0, 1) 96%
+  );
+  border: 1px solid rgba(242, 215, 12, 1);
+}
